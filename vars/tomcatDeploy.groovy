@@ -6,6 +6,6 @@ def call(cred_id,user,ip){
        sh "scp -o StrictHostKeyChecking=no target/myweb.war ${user}@${ip}:/opt/tomcat8/webapps"
           // stop and start tomcat
        sh "ssh ${user}@${ip} /opt/tomcat8/bin/shutdown.sh"
-       sh "ssh ${user}@${ip} /opt/tomcat8/bin/startup.sh
+       sh "ssh ${user}@${ip} /opt/tomcat8/bin/startup.sh"
      }
 }
